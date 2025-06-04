@@ -1,0 +1,142 @@
+/* CSS CODE FOR HOME PAGE */
+#companyName{
+	font-size: 40px;
+	color: white;
+	float:left;
+}
+#div_trial_3{
+	background-color: #ed8a63;
+	height:50px;
+	width:100%;
+	color:white;
+}
+#div_trial_5{
+	background-color: #2c3b59;
+	height:50px;
+	width:100%;
+	color:white;
+}
+#div_trial_6{ 
+	background-color: #bfa694;
+	height:50px;
+	width:100%;
+	color:white;
+}
+#div_trial_7{
+	background-color: #7f4707;
+	height:50px;
+	width:100%;
+	color:white;
+}
+		
+#heading1{
+		
+	color: #7f4707;
+	text-align:center;
+	font-size:30px;
+}
+		
+body{
+	background-color: #bfa694;
+	padding:0px;
+	top-margin:0px;
+}
+.navlinks{
+	background-color:#ed8a63;
+	float:right;
+	padding:5px;
+	border-radius:0px;
+	
+}
+
+
+/* CSS CODE FOR LOGIN PAGE */
+.bodyOfloginPage{
+	background-color: #ed8a63;
+	
+	
+}
+#loginpageLogo{
+	
+	height:100px;
+	width:100px;
+	align-items:center;
+	margin-top:10%;
+	margin-left:46%;
+	
+}
+#loginP1{
+	text-align:center;
+	font-size:40px;
+}
+#email-pass{
+	margin-left:42%;
+	
+	font-size:20px;
+}
+#email{
+	font-size:20px;
+}
+#pwd{
+	font-size:20px;
+}
+#loginButton{
+	font-size:20px;
+	background-color: #4f90ff;
+}
+
+/* CSS CODE FOR FAQ PAGE */
+.answer{
+	
+	padding:5px;
+	
+}
+#faqH1{
+	text-decoration:underline;
+	font-size:55px;
+}
+#companyNamev-faq:link{
+	text-decoration:none;
+	font-size:50px;
+}
+#companyName-faq:visited{
+	text-decoration:none;
+	font-size:50px;
+}
+#companyName-faq:hover{
+	text-decoration:none;
+
+}
+#companyName-faq:active{
+	text-decoration:none;
+}
+#companyName-faq{
+	font-size: 40px;
+	color:#008CBA;
+}
+#policy-faq{
+	text-decoration:none;
+	text-align:center;
+}
+#companyLogo-faq{
+	float:left;
+	height:55px;
+	width:55px;
+	
+}
+#imgimg{
+	height:55px;
+	width:55px;
+}
+
+/* CSS CODE FOR ABOUT US PAGE */
+#aboutUsH1{
+	font-size:55px;
+	text-decoration: underline;
+}
+#aboutUsH2{
+	font-size:35px;
+}
+#aboutUsP{
+	font-size:18px;
+}
