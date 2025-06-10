@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Cricket Game</title>
+   <style>
+      body{
+         text-align: center;
+      }
+   </style>
+</head>
+<body>
+   <h1>Stone Paper Scissor Game</h1>
+   <button onclick="
+      {
+      let computerChoice;
+      let randomNo = Math.random()*3;
+      if(randomNo>0 && randomNo<=1) computerChoice = 'Stone';
+      else if(randomNo > 1 && randomNo <= 2) computerChoice = 'Paper';
+      else computerChoice = 'Scissor';
+
+      let result;
+      if(computerChoice === 'Stone') result = `it's a tie`;
+      else if(computerChoice === 'Scissor') result = `you won`;
+      else result = `compluter won`;
+
+      alert(`you have chosen Stone. Computer choice is ${computerChoice} and ${result}`); 
+      }
+   ">Stone</button>
+
+
+   <button onclick="
+   {
+      let computerChoice;
+      let randomNo = Math.random()*3;
+      if(randomNo>0 && randomNo<=1) computerChoice = 'Stone';
+      else if(randomNo > 1 && randomNo <= 2) computerChoice = 'Paper';
+      else computerChoice = 'Scissor';
+
+      let result;
+      if(computerChoice === 'Scissor') result = `computer won`;
+      else if(computerChoice === 'Paper') result = `it's a tie`;
+      else result = `you won`;
+
+      alert(`you have chosen Paper. Computer choice is ${computerChoice} and ${result}`); 
+   }
+   ">Paper</button>
+
+   <button onclick="
+   {
+      let computerChoice;
+      let randomNo = Math.random()*3;
+      if(randomNo>0 && randomNo<=1) computerChoice = 'Stone';
+      else if(randomNo > 1 && randomNo <= 2) computerChoice = 'Paper';
+      else computerChoice = 'Scissor';
+
+      let result;
+      if(computerChoice === 'Stone') result = `computer won`;
+      else if(computerChoice === 'Scissor') result = `it's a tie`;
+      else result = `you won`;
+
+      alert(`you have chosen Scissor. Computer choice is ${computerChoice} and ${result}`); 
+   } 
+   ">Scissor</button>
+
+   
+<script>
+   
+</script>
+</body>
+</html>
