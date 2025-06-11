@@ -3,43 +3,69 @@
 <head>
 	<title> task 10 </title>
 	<style>
-		
+		body{
+			margin-top:10px;
+			margin-bottom:10px;
+			margin-left:30%;
+			margin-right:30%;
+			border: 2px solid red;
+			border-radius: 10px;
+			background-color:  yellow;
+		}
 	</style>
 </head>
 <body>
+<div style="padding:20px;">
 	<h2 style="text-align:center"> Basic Information Form </h2>
 	<form>
-		<div> 
-			
-			<label for="fname" > First Name: </label><br>
-			<input type="text" style="display:block"> 
+		
+			<label for="fname"  > Name: </label><br>
+			<input type="text" style="display:block;width:100%;" required="true" placeholder="enter your name:"> <br>
 		
 			
-			<label for="mName" > Middle Name: </label><br>
-			<input type="text" style="display:block"> 
+			
+			<label for="phone"> Mobile No.: </label><br>
+			<input type="tel" id="phone" name="phone" style="display:block;width:100%;" required="true"><br>
+			
+		
+			<label for="email"> Email: </label><br>
+			<input type="email" id="phone" name="phone" style="display:block;width:100%;" required="true"><br>
+			
+		
+			
+			<label for="gender"> Gender: </label><br>
+			<input type="radio" id="male" name="gender" style="display:inline" required="true">Male
+			<input type="radio" id="female" name="gender" style="display:inline" required="true">Female
+			<input type="radio" id="transgender" name="gender" style="display:inline" required="true">Trans<br><br>
+			
+			<label for="course" > Select Course:</label>
+			<select required="true" style="display:block;width:100%;">
+				<option>--Select--</option>
+				<option>B.Tech</option>
+				<option>B.Arch</option>
+				<option>M.Tech</option>
+			</select><br>
+			
+			<label for="tea"> Do you like tea?</label>
+			<select name="tea" required="true" style="display:block;width:100%;">
+				<option>--Select--</option>
+				<option value="Yes">Yes</option>
+				<option value="No">No</option>
+				<option value="sometime">sometime</option>
+			</select><br>
 			
 			
-			<label for="lname" > Last Name: </label> <br>
-			<input type="text" style="display:block" > <br>
-		
-		
-		<br><br><br><br>
-			<div style="float:left; padding:10px;">
-			<label for="phone"> Mobile No. </label><br>
-			<input type="tel" id="phone" name="phone">
+			<div>
+			<label for="bio"> Bio:</label> <br>
+			<textarea type="textbox" id="bio" rows="8" column="0" required="true">
+			</textarea><br>
+			
+			<div style="text-align: center;" >
+			<input type="submit" value="submit" style="padding:5px; margin:5px;" >
+			<input type="reset" value="reset" style="padding:5px;margin:5px;" >
 			</div>
-		<br><br><br><br>
-			<div style="float:left; padding:10px;">
-			<label for="email"> Email </label><br>
-			<input type="email" id="phone" name="phone">
-			</div>
-		<br><br><br><br>
-			<div style="float:left; padding:10px;">
-			<label for="gender"> Gender </label><br>
-			<input type="radio" id="phone" name="phone">
-			</div>
-		<br><br><br><br>
 		</div>
 	</form>
+</div>
 </body>
 </html>
