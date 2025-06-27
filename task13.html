@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> task 13 </title>
+	<style>
+		h3{
+			font-weight:normal;
+			color:blue
+		}
+		.explanation{
+			font-size: 15px;
+			color: red;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="que1"> </div>
+	<div class="que2"> </div>
+	<div class="que3"> </div>
+	<div class="que4"> </div>
+	<div class="que5"> </div>
+	
+	
+	<script>
+		let name = document.querySelector('.que1');
+		name.innerHTML = `
+			<div>
+				<h1> ------ que 1------<h1>
+				<h3> name = badal raj </h3>
+				<h3> address = gaya college of engineering, gaya </h3>
+			</div>`
+			
+		let var1 = 55;
+		let var2 = 65.5;
+		document.querySelector('.que2').innerHTML = `
+			<h1> ------ que 2------<h1>
+			<h3> given value1 = ${var1} <h3>
+			<h3> given value2 = ${var2} <h3>
+			<h3> here data-type of ${var1} is ${typeof(var1)} <span class="explanation" >//using typeof(var)<span> </h3>
+			<h3> here data-type of ${var2} is ${typeof(var2)} <span class="explanation" >//using typeof(var)<span> </h3>
+		`
+		
+		let string1 = `"badal"`;
+		let string2 = `"raj"`;
+		let add = string1 + string2;
+		document.querySelector('.que3').innerHTML = `
+			<h1> ------ que 3------<h1>
+			<h3> given strings are ${string1} and ${string2}<h3>
+			<h3> adding of strings is ${add}<h3>
+			<h3> in alphabet capital = ${add.toUpperCase()} <span class="explanation" >//using '+' operator <span><h3>
+		`
+		
+		let string3 = "12345678";
+		let string4 = "Badal Raj";
+		let string5 = "!@#$%^&*()";
+		document.querySelector('.que4').innerHTML = `
+			<h1> ------ que 4------<h1>
+			<h3> here the given string is ${string3} and it have ${string3.length} bytes <span class="explanation" >//using string.length keyword <span> </h3>
+			<h3> here the given string is ${string4} and it have ${string4.length} bytes <span class="explanation" >//using string.length keyword <span> </h3>
+			<h3> here the given string is ${string5} and it have ${string5.length} bytes <span class="explanation" >//using string.length keyword <span> </h3>
+		`
+		
+		let num = Math.random()*100;
+		document.querySelector('.que5').innerHTML = `
+			<h1> ------ que 5------<h1>
+			<h3> here the random number is ${num} and after rounding of it, it becomes ${Math.round(num)} <span class="explanation" >//using Math.round() keyword <span>  </h3>
+			<h3> here the random number is ${num} and floor value is ${Math.floor(num)} <span class="explanation" >//using Math.floor() keyword <span>  </h3>
+			<h3> here the random number is ${num} and ceil value is ${Math.ceil(num)} <span class="explanation" >//using Math.ceil() keyword <span>  </h3>	
+		`
+
+	</script>
+</body>
+</html>
