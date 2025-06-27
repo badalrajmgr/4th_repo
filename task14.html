@@ -1,0 +1,51 @@
+<DOCTYPE html>
+<html>
+<head>
+	<style>
+	.que1,.que2,.que3,.que4,.que5{
+		border: 1px solid red;
+		background-color:yellow;
+		height:3cm;
+		width:20cm;
+		margin-top:0.5cm;
+	}
+	</style>
+	<title>task 14</title>
+</head>
+<body>
+	<div class="que1"> 
+		<label for="inputNumber1"> enter a number to check it is positive or negative: </label>
+		<input type="number" id="inputNumber1" >
+		<button onclick="checkNegative()">click to check</button>
+		<p class="answer1"> </p>
+	</div>
+	
+	<div class="que2"> 
+		<label for="inputNumber2"> enter any number to calculate absolute difference with 13:</label>
+		<input type="number" id="inputNumber2" >
+		<button onclick="absoluteDifference()">click to calculate</button>
+		<p class="answer2"> </p>
+	</div>
+	
+	<div class="que3"> 
+		<label for="inputNumber3">enter number to generate fibonacci series: </label>
+		<input type="number" id="inputNumber3" >
+		<button onclick="fibonacciSeries()">click here to generate</button>
+		<p class="answer3"> </p>
+	</div>
+	
+	<div class="que4"> 
+		<div style="width:20cm;" class="answer4">
+			<button onclick="sumOfMul3and5()" style="margin:3px;"> view </button>
+		</div>
+	</div>
+	<div class="que5">
+		<label for="inputNumber5">enter number to calculate cube: </label>
+		<input type="number" id="inputNumber5" >
+		<button onclick="cube()">get answer</button>
+		<p class="answer5"> </p>
+	</div>
+	
+	<script src="task14.js"></script>
+</body>
+</html>
