@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Size Increase on Click</title>
+    <style>
+		
+		.buttonContainer{text-align:center;}
+        img {
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+		#my-button,#increase,#decrease{font-size:20px;cursor:pointer;}
+		#my-2button{font-size:20px;cursor:pointer;}
+		#imageContainer{text-align:center;margin:5cm;}
+		h2{text-align:center;background-color:red;}
+		#currentTimeandDate,.queContainer{font-size:20px;text-align:center;}
+    </style>
+</head>
+<body >
+
+
+	<h2> ----- que 1 ----- </h2><br>
+	<div class="queContainer">
+		<div class="buttonContainer">
+			<button onclick="changeImageSize()" id="my-button">click here to zoom🥵 babitaji 😍🥰</button>
+		</div>
+		<br>
+		<div id="imageContainer"><img id="myImage" src="babitaji.jpeg" alt="Sample Image"><br></div>
+	</div>
+	
+	<h2> ----- que 2 ----- </h2><br>
+	
+	<div class="queContainer">
+		<div class="buttonContainer">
+		
+		<img id="my2Image" src="babitaji.jpeg" alt="Sample Image"><br>
+		
+		<button onclick="changeImage()" id="my-2button">click here for more pick of babitaji😍🥰</button>
+		</div>
+	</div>
+	
+	<br><h2> ----- que 3 ----- </h2><br>
+	
+	<div class="queContainer">
+		<p id="text"><b>BABITA - JI</b></p>
+		<button id="increase" onclick="increaseTextSize()"> Increase font size of text ⬆️ </button>
+		<button id="decrease" onclick="decreaseTextSize()"> decrease font size of text ⬇️ </button>
+	</div>
+	
+	
+	<br><h2> ----- que 4 ----- </h2><br>
+	
+	<div class="queContainer">
+		<p id="currentTimeandDate"> </p>
+	</div>
+	<br>
+	
+	
+    <script src="task16.js">
+		
+    </script>
+</body>
+</html>
