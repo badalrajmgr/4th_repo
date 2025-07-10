@@ -1,74 +1,103 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 <head>
-	<title> task 13 </title>
 	<style>
-		h3{
-			font-weight:normal;
-			color:blue
-		}
-		.explanation{
-			font-size: 15px;
-			color: red;
-		}
-	</style>
+	body{background-color:#ffdcdc;}
+	.que1,.que2,.que3,.que4,.que5{
+		border: 1px solid red;
+		background-color:#ddf6d2;
+		height:3cm;
+		width:20cm;
+		margin-top:0.5cm;
+	}
 	
+	@media screen and (min-width: 1024px) {
+		.que1, .que2, .que3, .que4, .que5 {
+		  width: 80%;
+		  margin: 1rem auto;
+		  font-size: 1.1rem;
+		}
+
+		input[type="text"],input[type="number"],
+		button {
+		  font-size: 1rem;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		.que1, .que2, .que3, .que4, .que5 {
+		  width: 100%;
+		  height: auto;
+		  font-size: 1rem;
+		}
+
+		input[type="text"],input[type="number"] {
+		  width: 100%;
+		  margin-top: 5px;
+		  margin-bottom: 10px;
+		  font-size: 1rem;
+		}
+
+		button {
+		  display: block;
+		  width: 100%;
+		  font-size: 1rem;
+		  margin-top: 10px;
+		}
+
+		label {
+		  display: block;
+		  margin-top: 10px;
+		}
+	}
+	</style>
+	<title>task 13</title>
 </head>
 <body>
-	<div class="que1"> </div>
-	<div class="que2"> </div>
-	<div class="que3"> </div>
-	<div class="que4"> </div>
-	<div class="que5"> </div>
+	<div class="que1"> 
+		<label for="inputNumber1"> Enter your name: </label>
+		<input type="text" id="inputNumber1" >
+		<label for="inputNumber2"> Enter your Address: </label>
+		<input type="text" id="inputNumber2" >
+		<button onclick="printNameAdd()">click to check</button>
+		<p class="answer1"> </p>
+	</div>
 	
+	<div class="que2"> 
+		<label for="inputNumber3"> enter any number/string:</label>
+		<input type="text" id="inputNumber3" >
+		<label for="inputNumber4"> enter another number/string:</label>
+		<input type="text" id="inputNumber4" >
+		<button onclick="value_dataType()">check</button>
+		<p class="answer2"> </p>
+	</div>
 	
-	<script>
-		let name = document.querySelector('.que1');
-		name.innerHTML = `
-			<div>
-				<h1> ------ que 1------<h1>
-				<h3> name = badal raj </h3>
-				<h3> address = gaya college of engineering, gaya </h3>
-			</div>`
-			
-		let var1 = 55;
-		let var2 = 65.5;
-		document.querySelector('.que2').innerHTML = `
-			<h1> ------ que 2------<h1>
-			<h3> given value1 = ${var1} <h3>
-			<h3> given value2 = ${var2} <h3>
-			<h3> here data-type of ${var1} is ${typeof(var1)} <span class="explanation" >//using typeof(var)<span> </h3>
-			<h3> here data-type of ${var2} is ${typeof(var2)} <span class="explanation" >//using typeof(var)<span> </h3>
-		`
+	<div class="que3"> 
+		<label for="inputNumber5">enter string: </label>
+		<input type="text" id="inputNumber5" >
+		<label for="inputNumber6">enter another string: </label>
+		<input type="text" id="inputNumber6" >
+		<button onclick="addStrings()">click here to add both strings</button>
+		<p class="answer3"> </p>
+	</div>
+	
+	<div class="que4"> 
+		<label for="inputNumber7">enter string: </label>
+		<input type="text" id="inputNumber7" >
+		<button onclick="inBytes()">click to convert length in bytes</button>
+		<p class="answer4"> </p>
 		
-		let string1 = `"badal"`;
-		let string2 = `"raj"`;
-		let add = string1 + string2;
-		document.querySelector('.que3').innerHTML = `
-			<h1> ------ que 3------<h1>
-			<h3> given strings are ${string1} and ${string2}<h3>
-			<h3> adding of strings is ${add}<h3>
-			<h3> in alphabet capital = ${add.toUpperCase()} <span class="explanation" >//using '+' operator <span><h3>
-		`
+	</div>
+	<div class="que5">
+		<label for="inputNumber8">enter number: </label>
+		<input type="number" id="inputNumber8" >
+		<label for="inputNumber9">enter digit to be round: </label>
+		<input type="number" id="inputNumber9" >
 		
-		let string3 = "12345678";
-		let string4 = "Badal Raj";
-		let string5 = "!@#$%^&*()";
-		document.querySelector('.que4').innerHTML = `
-			<h1> ------ que 4------<h1>
-			<h3> here the given string is ${string3} and it have ${string3.length} bytes <span class="explanation" >//using string.length keyword <span> </h3>
-			<h3> here the given string is ${string4} and it have ${string4.length} bytes <span class="explanation" >//using string.length keyword <span> </h3>
-			<h3> here the given string is ${string5} and it have ${string5.length} bytes <span class="explanation" >//using string.length keyword <span> </h3>
-		`
-		
-		let num = Math.random()*100;
-		document.querySelector('.que5').innerHTML = `
-			<h1> ------ que 5------<h1>
-			<h3> here the random number is ${num} and after rounding of it, it becomes ${Math.round(num)} <span class="explanation" >//using Math.round() keyword <span>  </h3>
-			<h3> here the random number is ${num} and floor value is ${Math.floor(num)} <span class="explanation" >//using Math.floor() keyword <span>  </h3>
-			<h3> here the random number is ${num} and ceil value is ${Math.ceil(num)} <span class="explanation" >//using Math.ceil() keyword <span>  </h3>	
-		`
-
-	</script>
+		<button onclick="roundof()">click to round</button>
+		<p class="answer5"> </p>
+	</div>
+	
+	<script src="task13_2.js"></script>
 </body>
 </html>
