@@ -1,0 +1,52 @@
+body{
+	margin : 8% 0%;
+	background-color:#758467;
+	
+}
+.form-parent-container{
+	margin:auto;
+	width:12cm;
+	height:14cm;
+	border: 2px solid #f1f1f1;
+	border-radius: 15px;
+	text-align:center;
+	
+}
+.form-child-container{
+	
+	margin: 15% 20%;
+	height:70%;
+	width:60%;
+	padding: 0px;
+	
+}
+.SIGNUP{
+	margin:5px;
+	padding:10px;
+	font-size:35px;
+	
+}
+
+
+.userPass{
+	
+	margin:5% 10%;
+	height:50%;
+	width:80%;
+	padding:5px 0px;
+}
+.signup-btn{
+	color:blue;
+	margin: 10% 0%;
+	width:100%;
+}
+a:hover{
+	color:#f1f1f1;
+	cursor:pointer;
+}
+a:link{
+	color:#f1f1f1;
+}
+a:visited{color:#f1f1f1;}
+a:active{color:#f1f1f1;}
+
