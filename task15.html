@@ -2,38 +2,124 @@
 <html>
 <head>
 	<title> task 15</title>
-	<style></style>
+	<style>body{background-color:#ffdcdc;}
+	.que1,.que2,.que3,.que4,.que5{
+		border: 1px solid red;
+		background-color:#ddf6d2;
+		height:3cm;
+		width:20cm;
+		margin-top:0.5cm;
+	}
+	
+	@media screen and (min-width: 1024px) {
+		.que1, .que2, .que3, .que4, .que5 {
+		  width: 80%;
+		  margin: 1rem auto;
+		  font-size: 1.1rem;
+		}
+
+		input[type="text"],input[type="number"],
+		button {
+		  font-size: 1rem;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+		.que1, .que2, .que3, .que4, .que5 {
+		  width: 100%;
+		  height: auto;
+		  font-size: 1rem;
+		}
+
+		input[type="text"],input[type="number"] {
+		  width: 100%;
+		  margin-top: 5px;
+		  margin-bottom: 10px;
+		  font-size: 1rem;
+		}
+
+		button {
+		  display: block;
+		  width: 100%;
+		  font-size: 1rem;
+		  margin-top: 10px;
+		}
+
+		label {
+		  display: block;
+		  margin-top: 10px;
+		}
+	}</style>
 </head>
 <body>
-	<div>
-		<h2><b>All calculations are done in code<br>there is nothing to show here<b></h2>
+	<div class="que1"> 
+		<label for="userInput">Enter numbers separated by commas:</label>
+		<input type="text" id="userInput" placeholder="e.g. 5, 3, 9, 1, 4">
+		<button onclick="sortArray()">Sort</button><br>
+		
+		<h4>Sorted Array:</h4>
+		<p class="answer1"> </p>
+	</div>
+	<div class="que1"> 
+		<label for="array1">Enter first array (comma-separated):</label>
+		<input type="text" id="array1" placeholder="e.g. 5, 3, 9, 1, 4"><br>
+		
+		<label for="array2">Enter second array (comma-separated):</label>
+		<input type="text" id="array2" placeholder="e.g. 5, 3, 9, 1, 4">
+		<button onclick="concatenateArrays()">click to check</button>
+		<p class="answer2"> </p>
+	</div>
+	<div class="que1"> 
+		<label for="userArray">Enter array (comma-separated):</label>
+		<input type="text" id="userArray" placeholder="e.g. 10, 20, 30, 40">
+
+		<button onclick="removeFirstElement()">Remove First Element</button>
+
+		<p class="answer3"> </p>
 	</div>
 	
 	<script>
-	function sort(){
-	let arr = [3,2,3,4,1,7,5,9,8];
 	
-	arr.sort();
-	console.log(arr);
-	}
-	sort();
+	function sortArray() {
+	
+		let input = document.getElementById("userInput").value;
 
-	function concatenate(){
-		let arr1 = [2,3,1,4];
-		let arr2 = [4,5,8,3,8];
-		let arr3 = arr1 +','+ arr2;
-		
-		console.log(arr3);
-		
-	}
-	concatenate();
+		let array = input.split(',').map(Number);
 
-	function remove1stEle(){
-		let arr = [1,2,3,4,5,6];
-		arr.shift(1);
-		console.log(arr);
+		array.sort(function(a, b) {
+			return a - b;
+		});
+
+    
+      document.querySelector('.answer1').textContent = array.join(", ");
 	}
-	remove1stEle();
+	
+	function concatenateArrays() {
+      let input1 = document.getElementById("array1").value;
+      let input2 = document.getElementById("array2").value;
+
+      // Convert inputs to arrays of strings or numbers
+      let array1 = input1.split(',').map(item => item.trim());
+      let array2 = input2.split(',').map(item => item.trim());
+
+      // Concatenate the arrays
+      let concatenatedArray = array1.concat(array2);
+
+      // Display the result
+      document.querySelector(".answer2").innerText = `concatenated array is: ${concatenatedArray.join(", ")}`;
+    }
+	
+	function removeFirstElement() {
+      let input = document.getElementById("userArray").value;
+
+      
+      let array = input.split(',').map(item => item.trim());
+
+     
+      array.shift();
+
+      document.querySelector(".answer3").innerText = `Array after remove first element is: ${array.join(", ")}`;
+    }
 	</script>
 </body>
 </html>
