@@ -1,58 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+<DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Size Increase on Click</title>
-    <style>
+	<style>
+	body{background-color:#ffdcdc;}
+	#zoomImage{
+		height:75%;
+		width:90%;
+	}
+	.que1{
+		border: 1px solid red;
+		background-color:#ddf6d2;
+		height:10cm;
+		width:20cm;
+		margin-top:0.5cm;
+	}
+	.que2,.que3,.que4,.que5{
+		border: 1px solid red;
+		background-color:#ddf6d2;
+		height:6cm;
+		width:20cm;
+		margin-top:0.5cm;
 		
-		.buttonContainer{text-align:center;}
-        img {
-            transition: transform 0.3s ease; /* Smooth transition */
-        }
-		#my-button,#increase,#decrease{font-size:20px;cursor:pointer;}
-		#my-2button{font-size:20px;cursor:pointer;}
-		#imageContainer{text-align:center;margin:5cm;}
-		h2{text-align:center;background-color:red;}
-		#currentTimeandDate,.queContainer{font-size:20px;text-align:center;}
-    </style>
+	}
+	#zoomImage{margin: 0px 10px;}
+	#currentTimeandDate{font-size:30px;}
+	input[type="text"],input[type="number"],
+		button {
+		  font-size: 1rem;
+		  margin:5px 0px;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		.que1{
+			width: 100%;
+			font-size: 1rem;
+			height:10cm;
+		}
+	
+		.que2, .que3, .que4, .que5 {
+			width: 80%;
+			margin: 1rem auto;
+			font-size: 1.1rem;
+			height:6cm;
+		}
+
+		input[type="text"],input[type="number"],
+		button {
+		  font-size: 1rem;
+		}
+	}
+	
+	@media screen and (max-width: 768px) {
+	
+		.que1{
+			width: 100%;
+			font-size: 1rem;
+			height:15cm;
+		}
+		.que2, .que3, .que4, .que5 {
+		  width: 100%;
+		  height: 6cm;
+		  font-size: 1rem;
+		  
+		}
+
+		input[type="text"],input[type="number"] {
+		  width: 100%;
+		  margin-top: 5px;
+		  margin-bottom: 10px;
+		  font-size: 1rem;
+		}
+
+		button {
+		  display: block;
+		  width: 100%;
+		  font-size: 1rem;
+		  margin-top: 10px;
+		}
+
+		label {
+		  display: block;
+		  margin-top: 10px;
+		}
+	}
+	</style>
+	<title>task 16</title>
 </head>
-<body >
-
-
-	<h2> ----- que 1 ----- </h2><br>
-	
-	
-	<h2> ----- que 2 ----- </h2><br>
-	
-	<div class="queContainer">
-		<div class="buttonContainer">
+<body>
+	<center class="que1"> 
+		<label for="inputNumber1"> Enter your name: </label>
+		<input type="text" id="inputNumber1" ><br>
+		<label for="inputNumber2"> Enter your college name: </label>
+		<input type="text" id="inputNumber2" ><br>
+		<label for="inputNumber3"> Enter your branch: </label>
+		<input type="text" id="inputNumber3" ><br>
+		<label for="inputNumber4"> Enter your session: </label>
+		<input type="text" id="inputNumber4" ><br>
+		<label for="inputNumber5"> Enter your mobile no: </label>
+		<input type="text" id="inputNumber5" ><br><br>
 		
-		<img id="my2Image" src="babitaji.jpeg" alt="Sample Image"><br>
+		<button onclick="printFormData()">SUBMIT</button>
+		<p class="answer1"> </p>
+	</center>
+	
+	<center class="que2"> 
+		<img id="zoomImage" src="./images/free-nature-images.jpg" alt="picture loading..."><br><br>
+		<button onclick="changeImage()">Click to change image</button>
 		
-		<button onclick="changeImage()" id="my-2button">click here for more pick of babitaji😍🥰</button>
-		</div>
-	</div>
+	</center>
 	
-	<br><h2> ----- que 3 ----- </h2><br>
-	
-	<div class="queContainer">
-		<p id="text"><b>Badal Raj</b></p>
+	<center class="que3"> 
+		<p id="text"><b>Jai Shree Ram</b></p>
 		<button id="increase" onclick="increaseTextSize()"> Increase font size of text ⬆️ </button>
 		<button id="decrease" onclick="decreaseTextSize()"> decrease font size of text ⬇️ </button>
-	</div>
-	
-	
-	<br><h2> ----- que 4 ----- </h2><br>
-	
-	<div class="queContainer">
-		<p id="currentTimeandDate"> </p>
-	</div>
-	<br>
-	
-	
-    <script src="task16.js">
 		
-    </script>
+	</center>
+	
+	
+	<center class="queContainer que4">
+	
+		<p id="currentTimeandDate"> </p>
+		
+	</center>
+		
+	<script src="task16_2.js"></script>
 </body>
 </html>
