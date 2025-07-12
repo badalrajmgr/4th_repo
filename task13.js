@@ -20,8 +20,9 @@ function value_dataType(){
 	
 	if(val1 == val2) result += `value of input 1 and input 2 are same\n` ;
 	else result += `value of input 1 and input 2 are not same\n`;
-			
-	if(!isNaN(val1) && !isNaN(val2)) result += `dataType are same`;
+	
+	
+	if(val1 === val2) result += `dataType are same`;
 	else result += `dataType are different`;
 			
 	showAns.innerText = result;
