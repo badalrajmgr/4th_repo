@@ -9,25 +9,6 @@ function printNameAdd(){
 	document.querySelector('.answer1').innerText = `${result}`;
 }
 
-function value_dataType3(){
-	let val1 = document.querySelector('#inputNumber3').value;
-	//let isNum1 = isNaN(val1);
-	let val2 = document.querySelector('#inputNumber4').value;
-	//let isNum2 = isNaN(val2);
-		
-	
-	let result = "";
-	let showAns = document.querySelector('.answer2');
-	
-	if(val1 === val2) result += `value of input 1 and input 2 are same\n` ;
-	else result += `value of input 1 and input 2 are not same\n`;
-	
-	
-	if(val1 == val2) result += `dataType are same`;
-	else result += `dataType are different`;
-			
-	showAns.innerText = result;
-}
 
 function addStrings(){
 	let inputstr1 = document.querySelector('#inputNumber5').value;
