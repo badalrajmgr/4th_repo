@@ -9,20 +9,21 @@ function printNameAdd(){
 	document.querySelector('.answer1').innerText = `${result}`;
 }
 
-function value_dataType(){
+function value_dataType3(){
 	let val1 = document.querySelector('#inputNumber3').value;
 	//let isNum1 = isNaN(val1);
 	let val2 = document.querySelector('#inputNumber4').value;
 	//let isNum2 = isNaN(val2);
 		
+	
 	let result = "";
 	let showAns = document.querySelector('.answer2');
 	
-	if(val1 == val2) result += `value of input 1 and input 2 are same\n` ;
+	if(val1 === val2) result += `value of input 1 and input 2 are same\n` ;
 	else result += `value of input 1 and input 2 are not same\n`;
 	
 	
-	if(val1 === val2) result += `dataType are same`;
+	if(val1 == val2) result += `dataType are same`;
 	else result += `dataType are different`;
 			
 	showAns.innerText = result;
@@ -53,3 +54,39 @@ function roundof(){
 	
 	
 }
+
+function value_dataType() {
+      const val1 = document.querySelector("#inputNumber3").value;
+      const val2 = document.querySelector("#inputNumber4").value;
+
+      let type1 = inferType(val1);
+      let type2 = inferType(val2);
+
+      let parsedVal1 = parseValue(val1, type1);
+      let parsedVal2 = parseValue(val2, type2);
+
+      const result = document.querySelector(".answer2");
+
+      if (parsedVal1 === parsedVal2 && type1 === type2) {
+        result.textContent = ` Both value and type are same. Type: ${type1}`;
+      } else {
+        result.textContent = ` Value or type mismatch. Type1: ${type1}, Type2: ${type2}`;
+      }
+}
+
+    function inferType(val) {
+      if (val === "true" || val === "false") return "boolean";
+      if (!isNaN(val) && val.trim() !== "") return "number";
+      return "string";
+    }
+
+    function parseValue(val, type) {
+      switch (type) {
+        case "number":
+          return Number(val);
+        case "boolean":
+          return val === "true";
+        default:
+          return val;
+		}
+    }
